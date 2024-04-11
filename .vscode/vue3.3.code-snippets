@@ -1,0 +1,37 @@
+{
+  "VueSnippetdefineOptions": {
+    "scope": "vue",
+    "prefix": "VueSnippet",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "/* ----- Import Type ----- */\n",
+      "/* ----- Import Variables ----- */\n",
+      "/* ----- Import Components ----- */\n",
+      "/* ----- Global variables ----- */\n",
+      "//#region ----- Element Ref -----",
+      "//#endregion ----- Element Ref -----\n",
+      "//#region ----- Stores -----",
+      "//#endregion ----- Stores -----\n",
+      "//#region ----- State -----",
+      "const state = reactive({",
+      "\tisFetching: true,",
+      "\tisPending: false,",
+      "\tisError404: false",
+      "});",
+      "//#endregion ----- State -----\n",
+      "//#region ----- Composables -----",
+      "//#endregion ----- Composables -----\n",
+      "//#region ----- Variables -----",
+      "//#endregion ----- Variables -----\n",
+      "//#region ----- Functions -----",
+      "//#endregion ----- Functions -----\n",
+      "//#region ----- Hooks -----",
+      "//#endregion ----- Hooks -----\n",
+      "</script>\n",
+      "<template>",
+      "\t<div>\n\t\t$1\n\t</div>",
+      "</template>"
+    ],
+    "description": "Vue3.3+defineOptions"
+  }
+}

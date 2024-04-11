@@ -1,0 +1,33 @@
+{
+  "$schema": "./_schema.json",
+  "locale": "Tiếng Việt",
+  "buttons": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "add": "Thêm",
+    "search": "Tìm kiếm",
+    "clear": "Clear",
+    "close": "Đóng"
+  },
+  "menus": {
+    "home": "Trang chủ",
+    "vendor-management": {
+      "root": "Quản lý nhà cung cấp",
+      "list": "Danh sách nhà cung cấp",
+      "add": "Thêm nhà cung cấp"
+    }
+  },
+  "auth": {
+    "username": "Tên tài khoản",
+    "password": "Mật khẩu",
+    "login": "Đăng nhập",
+    "signin": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "profile": "Thông tin"
+  },
+  "rules": {
+    "required": "{field} là bắt buộc"
+  }
+}

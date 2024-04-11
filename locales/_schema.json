@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "locale": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "object",
+      "properties": {
+        "save": {
+          "type": "string"
+        },
+        "cancel": {
+          "type": "string"
+        },
+        "delete": {
+          "type": "string"
+        },
+        "edit": {
+          "type": "string"
+        },
+        "add": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "clear": {
+          "type": "string"
+        },
+        "close": {
+          "type": "string"
+        }
+      },
+      "required": ["save", "cancel", "delete", "edit", "add", "search", "clear", "close"]
+    },
+    "menus": {
+      "type": "object",
+      "properties": {
+        "home": {
+          "type": "string"
+        },
+        "vendor-management": {
+          "type": "object",
+          "properties": {
+            "root": {
+              "type": "string"
+            },
+            "list": {
+              "type": "string"
+            },
+            "add": {
+              "type": "string"
+            }
+          },
+          "required": ["root", "list", "add"]
+        }
+      },
+      "required": ["home", "vendor-management"]
+    },
+    "auth": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "login": {
+          "type": "string"
+        },
+        "signin": {
+          "type": "string"
+        },
+        "logout": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        }
+      },
+      "required": ["username", "password", "login", "signin", "logout", "profile"]
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "required": {
+          "type": "string"
+        }
+      },
+      "required": ["required"]
+    }
+  },
+  "required": ["locale", "buttons", "menus", "auth", "rules"]
+}

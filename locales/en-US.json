@@ -1,0 +1,33 @@
+{
+  "$schema": "./_schema.json",
+  "locale": "English",
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "clear": "Clear",
+    "close": "Close"
+  },
+  "menus": {
+    "home": "Home",
+    "vendor-management": {
+      "root": "Vendor Management",
+      "list": "Vendor List",
+      "add": "New Vendor"
+    }
+  },
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+    "signin": "Sign in",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "rules": {
+    "required": "{field} is required"
+  }
+}

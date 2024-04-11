@@ -1,0 +1,19 @@
+{
+  "i18n-ally.localesPaths": [
+    "locales"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "vi-VN",
+  "i18n-ally.refactor.templates": [
+    {
+      "templates": [
+        "i18n.t('{key}'{args})",
+        "transt('{key}'{args})",
+      ],
+    },
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+}
