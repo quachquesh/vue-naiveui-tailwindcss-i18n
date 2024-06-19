@@ -34,7 +34,7 @@ const localeCurrent = computed<{ locale: NLocale; date: NDateLocale }>(() => {
     class="bg-gray-100"
   >
     <!-- <NGlobalStyle /> -->
-    <transition name="fade" mode="out-in" appear>
+    <Transition name="fade" mode="out-in" appear>
       <div v-if="appStore.isLoadingWebsite" id="loading-website">
         <div class="loading">
           <svg viewBox="0 0 187.3 93.7" height="200px" width="300px" class="svgbox">
@@ -53,7 +53,7 @@ const localeCurrent = computed<{ locale: NLocale; date: NDateLocale }>(() => {
           </svg>
         </div>
       </div>
-    </transition>
+    </Transition>
     <AppProvider>
       <RouterView />
     </AppProvider>

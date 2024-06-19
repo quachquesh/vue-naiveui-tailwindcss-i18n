@@ -1,4 +1,4 @@
-import { Auth } from '@/types'
+import type { Auth } from '@/types'
 
 export const useAuthStore = defineStore('authStore', {
   state: () => ({

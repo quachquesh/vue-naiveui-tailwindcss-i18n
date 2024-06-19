@@ -115,4 +115,4 @@ export const i18n = createI18n<[object], I18nLocalesKey>({
   datetimeFormats: datetimeConfigs
 })
 
-export const { t: $t, d: $d, n: $n } = i18n.global
+export const { t, d, n } = i18n.global

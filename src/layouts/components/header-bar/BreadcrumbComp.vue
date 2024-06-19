@@ -31,20 +31,20 @@ const { breadcrumbs } = storeToRefs(useAppStore())
 </script>
 
 <template>
-  <n-breadcrumb>
-    <transition-group name="breadcrumb">
-      <n-breadcrumb-item
+  <NBreadcrumb>
+    <TransitionGroup name="breadcrumb">
+      <NBreadcrumbItem
         v-for="breadcrumb in breadcrumbs"
         :key="breadcrumb.text"
         :clickable="!!breadcrumb.to"
       >
-        <router-link v-if="breadcrumb.to" :to="breadcrumb.to">
-          {{ t(breadcrumb.text) }}
-        </router-link>
+        <RouterLink v-if="breadcrumb.to" :to="breadcrumb.to">
+          {{ $t(breadcrumb.text) }}
+        </RouterLink>
         <template v-else>
-          {{ t(breadcrumb.text) }}
+          {{ $t(breadcrumb.text) }}
         </template>
-      </n-breadcrumb-item>
-    </transition-group>
-  </n-breadcrumb>
+      </NBreadcrumbItem>
+    </TransitionGroup>
+  </NBreadcrumb>
 </template>

@@ -15,9 +15,9 @@ document.head.appendChild(meta)
 // Custom CSS
 import '@/assets/styles/index.scss'
 
+const pinia = createPinia()
 const app = createApp(App)
 
-const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 pinia.use(({ store }) => {
   store.$router = markRaw(router)

@@ -4,7 +4,7 @@
 /* ----- Import Variables ----- */
 
 /* ----- Import Components ----- */
-import SideBar from './components/SideBar.vue'
+import SideBar from './components/SidebarMenu.vue'
 import HeaderBar from './components/HeaderBar.vue'
 
 /* ----- Global variables ----- */
@@ -43,27 +43,27 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <n-layout has-sider class="h-screen">
+  <NLayout has-sider class="h-screen">
     <!-- Side bar -->
-    <side-bar />
+    <SideBar />
 
-    <n-layout>
+    <NLayout>
       <!-- navbar -->
-      <header-bar />
+      <HeaderBar />
 
-      <n-layout-content
+      <NLayoutContent
         content-style="padding: 24px 30px;"
         position="absolute"
         :native-scrollbar="false"
       >
-        <router-view v-slot="{ Component, route }">
-          <transition name="fade-transform" mode="out-in" appear>
+        <RouterView v-slot="{ Component, route }">
+          <Transition name="fade-transform" mode="out-in" appear>
             <component :is="Component" :key="route.name" class="flex-1" />
-          </transition>
-        </router-view>
-      </n-layout-content>
-    </n-layout>
-  </n-layout>
+          </Transition>
+        </RouterView>
+      </NLayoutContent>
+    </NLayout>
+  </NLayout>
 </template>
 
 <style lang="scss" scoped>

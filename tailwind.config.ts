@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import animate from 'tailwindcss-animate'
 import colors from './src/configs/colors'
 
 export default {
@@ -12,8 +13,7 @@ export default {
           300: `rgba(${colors.primary['300']}, <alpha-value>)`,
           400: `rgba(${colors.primary['400']}, <alpha-value>)`,
           500: `rgba(${colors.primary['500']}, <alpha-value>)`,
-          DEFAULT: `rgba(${colors.primary.default}, <alpha-value>)`,
-          dark: `rgba(${colors.primary.dark}, <alpha-value>)`
+          DEFAULT: `rgba(${colors.primary.default}, <alpha-value>)`
         },
 
         success: {
@@ -118,5 +118,5 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [animate]
 } satisfies Config

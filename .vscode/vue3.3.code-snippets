@@ -29,7 +29,9 @@
       "//#endregion ----- Hooks -----\n",
       "</script>\n",
       "<template>",
-      "\t<div>\n\t\t$1\n\t</div>",
+      "\t<div>",
+      "\t\t${1:content}",
+      "\t</div>",
       "</template>"
     ],
     "description": "Vue3.3+defineOptions"

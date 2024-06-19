@@ -3,51 +3,68 @@ import colors from './colors'
 
 export default {
   common: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily:
+      'Inter, v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     fontSize: '16px',
-    lineHeight: '24px',
+    fontSizeMedium: '16px',
+    fontSizeLarge: '18px',
+    fontSizeHuge: '20px',
 
     primaryColor: `rgb(${colors.primary.default})`,
-    primaryColorHover: 'rgb(91, 114, 137)',
-    primaryColorPressed: 'rgb(40, 63, 86)',
-    primaryColorSuppl: 'rgb(91, 114, 137)',
+    primaryColorHover: `#9673E4FF`,
+    primaryColorPressed: `#7751C9FF`,
+    primaryColorSuppl: `#3B2864FF`,
 
     errorColor: `rgb(${colors.danger.default})`,
-    errorColorHover: `rgb(${colors.danger[200]})`,
-    errorColorPressed: `rgb(${colors.danger[400]})`,
-    errorColorSuppl: `rgb(${colors.danger[200]})`,
+    errorColorHover: `#EA6D59FF`,
+    errorColorPressed: `#CF4B36FF`,
+    errorColorSuppl: `#CF4631FF`,
 
     warningColor: `rgb(${colors.warning.default})`,
-    warningColorHover: `rgb(${colors.warning[200]})`,
-    warningColorPressed: `rgb(${colors.warning[400]})`,
-    warningColorSuppl: `rgb(${colors.warning[200]})`,
+    warningColorHover: `#F7C364FF`,
+    warningColorPressed: `#DDA642FF`,
+    warningColorSuppl: `rgb(240, 138, 0)`,
 
     infoColor: `rgb(${colors.info.default})`,
-    infoColorHover: `rgb(${colors.info[200]})`,
-    infoColorPressed: `rgb(${colors.info[400]})`,
-    infoColorSuppl: `rgb(${colors.info[200]})`,
+    infoColorHover: `#64C1F7FF`,
+    infoColorPressed: `#42A4DDFF`,
+    infoColorSuppl: `#49B6F5FF`,
 
     successColor: `rgb(${colors.success.default})`,
-    successColorHover: `rgb(${colors.success[200]})`,
-    successColorPressed: `rgb(${colors.success[400]})`,
-    successColorSuppl: `rgb(${colors.success[200]})`
+    successColorHover: `#47C9A4FF`,
+    successColorPressed: `#22AC85FF`,
+    successColorSuppl: `#3AB491FF`
   },
   Button: {
-    // Medium
-    paddingMedium: '0 14px',
-    iconMarginMedium: '0 8px',
-    iconSizeMedium: '16px',
-    fontSizeMedium: '16px',
-    // Small
-    paddingSmall: '0 10px',
-    iconMarginSmall: '0 4px',
-    iconSizeSmall: '16px',
-    fontSizeSmall: '16px',
-    // Large
-    paddingLarge: '0 20px',
-    iconMarginLarge: '0 8px',
-    iconSizeLarge: '18px',
-    fontSizeLarge: '16px'
+    textColorPrimary: '#FFFFFFFF',
+    textColorHoverPrimary: '#FFFFFFFF',
+    textColorPressedPrimary: '#FFFFFFFF',
+    textColorFocusPrimary: '#FFFFFFFF',
+    textColorDisabledPrimary: '#FFFFFFFF',
+    textColorSuccess: '#FFFFFFFF',
+    textColorDisabledSuccess: '#FFFFFFFF',
+    textColorFocusSuccess: '#FFFFFFFF',
+    textColorPressedSuccess: '#FFFFFFFF',
+    textColorHoverSuccess: '#FFFFFFFF',
+    textColorError: '#FFFFFFFF',
+    textColorDisabledError: '#FFFFFFFF',
+    textColorFocusError: '#FFFFFFFF',
+    textColorPressedError: '#FFFFFFFF',
+    textColorHoverError: '#FFFFFFFF',
+    textColorInfo: '#FFFFFFFF',
+    textColorDisabledInfo: '#FFFFFFFF',
+    textColorFocusInfo: '#FFFFFFFF',
+    textColorPressedInfo: '#FFFFFFFF',
+    textColorHoverInfo: '#FFFFFFFF',
+    textColorWarning: '#FFFFFFFF',
+    textColorDisabledWarning: '#FFFFFFFF',
+    textColorFocusWarning: '#FFFFFFFF',
+    textColorPressedWarning: '#FFFFFFFF',
+    textColorHoverWarning: '#FFFFFFFF',
+    borderRadiusMedium: '4px'
+  },
+  FloatButton: {
+    textColorPrimary: '#FFFFFFFF'
   },
   Card: {
     paddingSmall: '16px 20px'
@@ -66,19 +83,16 @@ export default {
     tabFontWeightActive: 600,
     tabBorderColor: `rgb(${colors.gray[300]})`
   },
-  Tag: {
-    fontSizeMedium: '16px'
-  },
   Layout: {
-    siderColor: `rgb(${colors.primary.dark})`, // background sider
-    color: '#eaedf3', // background
-    textColor: `rgb(${colors.primary.dark})` // text color
+    siderColor: `#111C43`, // background sider
+    color: '#F0F1F7', // background
+    textColor: `rgb(${colors.gray[600]})` // text color
   },
   Menu: {
-    itemColorHover: `rgb(${colors.primary.default})`,
-    itemColorActive: `rgb(${colors.primary.default})`,
-    itemColorActiveHover: `rgb(${colors.primary.default})`,
-    itemColorActiveCollapsed: `rgb(${colors.primary.default})`,
+    itemColorHover: `#ffffff0d`,
+    itemColorActive: `#ffffff0d`,
+    itemColorActiveHover: `#ffffff0d`,
+    itemColorActiveCollapsed: `#ffffff0d`,
 
     itemTextColor: `rgb(${colors.white})`,
     itemTextColorHover: `rgb(${colors.white})`,
@@ -86,14 +100,14 @@ export default {
     itemIconColorHover: `rgb(${colors.white})`,
     itemIconColorCollapsed: `rgb(${colors.white})`,
 
-    itemTextColorActive: `rgb(${colors.warning.default})`,
-    itemTextColorActiveHover: `rgb(${colors.warning.default})`,
-    itemTextColorChildActive: `rgb(${colors.warning.default})`,
-    itemTextColorChildActiveHover: `rgb(${colors.warning.default})`,
-    itemIconColorActive: `rgb(${colors.warning.default})`,
-    itemIconColorActiveHover: `rgb(${colors.warning.default})`,
-    itemIconColorChildActive: `rgb(${colors.warning.default})`,
-    itemIconColorChildActiveHover: `rgb(${colors.warning.default})`,
+    itemTextColorActive: `rgb(${colors.primary[400]})`,
+    itemTextColorActiveHover: `rgb(${colors.primary[400]})`,
+    itemTextColorChildActive: `rgb(${colors.primary[400]})`,
+    itemTextColorChildActiveHover: `rgb(${colors.primary[400]})`,
+    itemIconColorActive: `rgb(${colors.primary[400]})`,
+    itemIconColorActiveHover: `rgb(${colors.primary[400]})`,
+    itemIconColorChildActive: `rgb(${colors.primary[400]})`,
+    itemIconColorChildActiveHover: `rgb(${colors.primary[400]})`,
 
     arrowColor: `rgba(${colors.white}, 0.7)`,
     arrowColorHover: `rgba(${colors.white}, 1)`,

@@ -7,7 +7,7 @@ import { menuOptions } from '@/data/sidebarMenu'
 /* ----- Import Components ----- */
 
 /* ----- Global variables ----- */
-const route = useRoute()
+// const route = useRoute()
 
 //#region ----- Element Ref -----
 //#endregion ----- Element Ref -----
@@ -33,37 +33,31 @@ const appStore = useAppStore()
 </script>
 
 <template>
-  <n-layout-sider
+  <NLayoutSider
     bordered
     collapse-mode="width"
     :collapsed="appStore.sideBarCollapsed"
     :collapsed-width="64"
-    :width="280"
+    :width="240"
   >
     <div
-      class="h-[140px] flex items-center justify-center border-b border-[#ffffff4d] transition-all"
+      class="h-[60px] flex items-center justify-center border-b border-[#ffffff4d] transition-all"
       :class="{
-        'h-[60px]': appStore.sideBarCollapsed
+        'px-3': appStore.sideBarCollapsed
       }"
     >
-      <transition name="fade" mode="out-in" appear>
-        <n-image
-          v-if="appStore.sideBarCollapsed"
-          src="/images/logo-icon.png"
-          preview-disabled
-          width="48"
-        />
-        <n-image v-else src="/images/logo-text-white.svg" preview-disabled />
-      </transition>
+      <RouterLink to="/">
+        <img src="@/assets/images/logo.svg" alt="" />
+      </RouterLink>
     </div>
-    <n-scrollbar style="height: calc(100% - 140px); padding-top: 8px">
-      <n-menu
+    <NScrollbar style="height: calc(100% - 140px); padding-top: 8px">
+      <NMenu
         :collapsed-width="64"
         :collapsed-icon-size="22"
         :options="menuOptions"
         :default-expand-all="true"
         :value="appStore.getBreadcrumbRoot?.routeName"
       />
-    </n-scrollbar>
-  </n-layout-sider>
+    </NScrollbar>
+  </NLayoutSider>
 </template>

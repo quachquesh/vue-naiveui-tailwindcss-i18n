@@ -35,5 +35,17 @@ export default (): MockHandler[] => [
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify(data))
     }
+  },
+  {
+    pattern: `${prefix}/me`,
+    handle: (req, res) => {
+      const data = {
+        id: 1,
+        email: 'admin@demo.com'
+      }
+
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify(data))
+    }
   }
 ]

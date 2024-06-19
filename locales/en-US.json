@@ -13,10 +13,9 @@
   },
   "menus": {
     "home": "Home",
-    "vendor-management": {
-      "root": "Vendor Management",
-      "list": "Vendor List",
-      "add": "New Vendor"
+    "page_1": {
+      "root": "Page 1",
+      "list": "List data"
     }
   },
   "auth": {

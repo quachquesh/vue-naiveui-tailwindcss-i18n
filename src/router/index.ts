@@ -47,13 +47,6 @@ router.beforeEach(async (to, from, next) => {
     }
   }
 
-  // Check permission
-  if (authStore.profile && to.name !== '403') {
-    if (!useCheckUserPermission(to.meta.roles)) {
-      return next({ name: '403' })
-    }
-  }
-
   next()
 })
 
@@ -65,7 +58,6 @@ router.afterEach((to) => {
 
   appStore.breadcrumbs = []
   to.matched.forEach((route) => {
-    console.log(route)
     if (route.meta.title) {
       appStore.breadcrumbs.push({
         text: route.meta.title,

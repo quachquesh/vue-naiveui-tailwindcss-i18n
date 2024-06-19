@@ -37,3 +37,15 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Commit git
+
+```sh
+npx cz
+```
+
+### Generate changelogs
+
+```sh
+npm run changelog
+```

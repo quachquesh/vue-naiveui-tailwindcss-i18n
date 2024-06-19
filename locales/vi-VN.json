@@ -13,10 +13,9 @@
   },
   "menus": {
     "home": "Trang chủ",
-    "vendor-management": {
-      "root": "Quản lý nhà cung cấp",
-      "list": "Danh sách nhà cung cấp",
-      "add": "Thêm nhà cung cấp"
+    "page_1": {
+      "root": "Trang 1",
+      "list": "Danh sách dữ liệu"
     }
   },
   "auth": {

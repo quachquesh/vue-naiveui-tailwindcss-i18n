@@ -9,17 +9,21 @@ function renderIcon(icon: string) {
 }
 
 function renderRoute(data: { label: string; name: string }) {
-  return renderLabel(h(RouterLink, { to: { name: data.name } }, { default: data.label }))
+  return renderLabel(h(RouterLink, { to: { name: data.name } }, { default: () => data.label }))
 }
 
 function renderLabel(label: string | RendererNode) {
+  const { sideBarCollapsed } = useAppStore()
+  if (sideBarCollapsed) {
+    return () => h(() => label)
+  }
   return () => h(NEllipsis, { tooltip: { keepAliveOnHover: false } }, { default: () => label })
 }
 
 export const menuOptions = computed<MenuMixedOption[]>(() => [
   {
     label: renderRoute({
-      label: t('menus.home'),
+      label: $t('menus.home'),
       name: RouteName.index
     }),
     key: RouteName.index,
@@ -27,24 +31,17 @@ export const menuOptions = computed<MenuMixedOption[]>(() => [
     props: {}
   },
   {
-    label: renderLabel(t('menus.vendor-management.root')),
-    key: 'vendor-management',
+    label: renderLabel($t('menus.page_1.root')),
+    key: 'page_1',
     icon: renderIcon('solar:user-circle-outline'),
     show: true,
     children: [
       {
         label: renderRoute({
-          label: t('menus.vendor-management.add'),
-          name: RouteName.vendor.create
+          label: $t('menus.page_1.list'),
+          name: RouteName.page_1.root
         }),
-        key: RouteName.vendor.create
-      },
-      {
-        label: renderRoute({
-          label: t('menus.vendor-management.list'),
-          name: RouteName.vendor.root
-        }),
-        key: RouteName.vendor.root
+        key: RouteName.page_1.root
       }
     ]
   }

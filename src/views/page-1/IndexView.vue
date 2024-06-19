@@ -35,5 +35,15 @@ const state = reactive({
 </script>
 
 <template>
-  <div>Project management</div>
+  <div>
+    <PageHeader title="Test Page 1" class="mb-5">
+      <NButton type="primary">Create</NButton>
+    </PageHeader>
+
+    <PageBlock>
+      <RouterLink :to="{ name: RouteName.page_1.detail.root, params: { id: 1 } }">
+        <NButton type="success">Detail</NButton>
+      </RouterLink>
+    </PageBlock>
+  </div>
 </template>

@@ -17,40 +17,40 @@ export default {
   },
   types: [
     {
-      value: 'Add',
-      name: 'Add:       Thêm tính năng mới (feature)'
+      value: 'feat',
+      name: 'feat:        Thêm tính năng mới (feature)'
     },
     {
-      value: 'Update',
-      name: 'Update:    Sửa code nhưng không thêm tính năng mới'
+      value: 'refactor',
+      name: 'refactor:    Sửa code nhưng không thêm tính năng mới'
     },
     {
-      value: 'Fix',
-      name: 'Fix:       Sửa lỗi (bug fix)'
+      value: 'fix',
+      name: 'fix:         Sửa lỗi (bug fix)'
     },
     {
-      value: 'Build',
-      name: 'Build:     Những thay đổi hướng đến quá trình build'
+      value: 'build',
+      name: 'build:       Những thay đổi hướng đến quá trình build'
     },
     {
-      value: 'Docs',
-      name: 'Docs:      Chỉ thay đổi documentation'
+      value: 'docs',
+      name: 'docs:        Chỉ thay đổi documentation'
     },
     {
-      value: 'Optz',
-      name: 'Optz:      Cải thiện hiệu năng'
+      value: 'perf',
+      name: 'perf:        Cải thiện hiệu năng'
     },
     {
-      value: 'Chore',
-      name: 'Chore:     Các thay đổi khác mà không sửa đổi src hoặc test'
+      value: 'chore',
+      name: 'chore:       Các thay đổi khác mà không sửa đổi src hoặc test'
     },
     {
-      value: 'Style',
-      name: 'Style:     Thay đổi code không ảnh hưởng đến logic (chỉ thay đổi style)'
+      value: 'style',
+      name: 'style:       Thay đổi code không ảnh hưởng đến logic (chỉ thay đổi style)'
     },
     {
-      value: 'Test',
-      name: 'Test:      Thêm các test case bị thiếu hoặc sửa các test case hiện có'
+      value: 'test',
+      name: 'test:        Thêm các test case bị thiếu hoặc sửa các test case hiện có'
     }
   ],
   issuePrefixes: [

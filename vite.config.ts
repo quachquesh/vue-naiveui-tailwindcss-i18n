@@ -1,8 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
 import { resolve, dirname } from 'node:path'
 
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -23,6 +24,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    vueDevTools(),
     mockServer({
       logLevel: 'info',
       mockRootDir: 'server-mock',
@@ -55,7 +57,15 @@ export default defineConfig({
       runtimeOnly: true,
       compositionOnly: true,
       include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**')
-    }),
-    splitVendorChunkPlugin()
-  ]
+    })
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          naiveUI: ['naive-ui']
+        }
+      }
+    }
+  }
 })

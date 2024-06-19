@@ -1,7 +1,7 @@
 import type { AxiosRequestConfig, InternalAxiosRequestConfig } from 'axios'
 import Axios from 'axios'
 
-const baseURL = useEnv('VITE_API_SERVER') ?? '' + '/api'
+const baseURL = (useEnv('VITE_API_SERVER') ?? '') + '/api'
 
 const defaultConfig: AxiosRequestConfig = {
   baseURL,
@@ -81,6 +81,7 @@ class AxiosHttp {
                 this.requests = []
               })
               .catch((error) => {
+                console.log(error)
                 if (error.response.status === 401) {
                   authStore.logout()
                 }

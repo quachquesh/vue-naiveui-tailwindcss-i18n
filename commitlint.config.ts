@@ -2,7 +2,7 @@ import type { UserConfig } from '@commitlint/types'
 import { RuleConfigSeverity } from '@commitlint/types'
 
 const configuration: UserConfig = {
-  ignores: [(commit) => commit.includes('init') || /^dev\d+\.\d+\.\d+/.test(commit)],
+  ignores: [(commit) => commit.includes('init')],
   extends: ['@commitlint/config-conventional'],
   rules: {
     // https://commitlint.js.org/#/reference-rules
@@ -11,11 +11,23 @@ const configuration: UserConfig = {
     'header-max-length': [RuleConfigSeverity.Error, 'always', 108],
     'subject-empty': [RuleConfigSeverity.Error, 'never'],
     'type-empty': [RuleConfigSeverity.Error, 'never'],
-    'type-case': [RuleConfigSeverity.Error, 'always', 'sentence-case'],
     'type-enum': [
       RuleConfigSeverity.Error,
       'always',
-      ['Add', 'Fix', 'Update', 'Build', 'Docs', 'Optz', 'Chore', 'Style', 'Test']
+      [
+        'build',
+        'ci',
+        'docs',
+        'feat',
+        'fix',
+        'perf',
+        'refactor',
+        'chore',
+        'types',
+        'style',
+        'test',
+        'revert'
+      ]
     ]
   }
 }

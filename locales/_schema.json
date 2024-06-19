@@ -42,7 +42,7 @@
         "home": {
           "type": "string"
         },
-        "vendor-management": {
+        "page_1": {
           "type": "object",
           "properties": {
             "root": {
@@ -50,15 +50,12 @@
             },
             "list": {
               "type": "string"
-            },
-            "add": {
-              "type": "string"
             }
           },
-          "required": ["root", "list", "add"]
+          "required": ["root", "list"]
         }
       },
-      "required": ["home", "vendor-management"]
+      "required": ["home", "page_1"]
     },
     "auth": {
       "type": "object",

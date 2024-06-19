@@ -29,13 +29,13 @@ const notification = useNotification()
 //#region ----- Variables -----
 const accountOptions = computed<DropdownMixedOption[]>(() => [
   {
-    label: t('auth.profile'),
+    label: $t('auth.profile'),
     icon: render.renderIcon({ icon: 'flowbite:profile-card-outline' }),
     props: {
       onClick: () => {
         notification.info({
-          title: t('auth.profile'),
-          content: JSON.stringify(authStore.profile?.profile) ?? 'empty',
+          title: $t('auth.profile'),
+          content: authStore.profile ? JSON.stringify(authStore.profile) : 'empty',
           meta: 'info',
           duration: 2000,
           keepAliveOnHover: true
@@ -44,7 +44,7 @@ const accountOptions = computed<DropdownMixedOption[]>(() => [
     }
   },
   {
-    label: t('auth.logout'),
+    label: $t('auth.logout'),
     icon: render.renderIcon({ icon: 'material-symbols:logout' }),
     props: {
       onClick: () => {
@@ -63,10 +63,10 @@ const accountOptions = computed<DropdownMixedOption[]>(() => [
 </script>
 
 <template>
-  <n-layout-header bordered class="flex items-center justify-between px-6">
+  <NLayoutHeader bordered class="flex items-center justify-between px-6">
     <!-- Left -->
     <div class="flex items-center gap-x-2">
-      <n-button
+      <NButton
         quaternary
         size="small"
         @click="appStore.sideBarCollapsed = !appStore.sideBarCollapsed"
@@ -74,43 +74,38 @@ const accountOptions = computed<DropdownMixedOption[]>(() => [
         <template #icon>
           <Icon icon="eva:menu-2-outline" />
         </template>
-      </n-button>
+      </NButton>
 
-      <breadcrumb-comp />
+      <BreadcrumbComp />
     </div>
     <!-- Right -->
     <div class="flex items-center gap-x-4">
-      <n-dropdown :options="appStore.localeOptions" @select="appStore.setLocale">
-        <n-button>
+      <NDropdown :options="appStore.localeOptions" @select="appStore.setLocale">
+        <NButton>
           <template #icon>
             <component :is="appStore.localeCurrent?.icon" />
           </template>
           {{ appStore.localeCurrent?.label }}
-        </n-button>
-      </n-dropdown>
+        </NButton>
+      </NDropdown>
 
-      <n-dropdown :options="accountOptions">
-        <n-button>
-          <n-avatar
-            round
-            :size="24"
-            :src="authStore.profile?.profile.avatar ?? 'empty'"
-            class="mr-2"
-          >
+      <NDropdown :options="accountOptions">
+        <NButton>
+          <NAvatar round :size="24" :src="authStore.profile?.avatar ?? 'empty'" class="mr-2">
             <template #placeholder>
               <div class="flex items-center justify-center w-full h-full">
-                <icon icon="mdi:user" height="20px" />
+                <Icon icon="mdi:user" height="20px" />
               </div>
             </template>
             <template #fallback>
               <div class="flex items-center justify-center w-full h-full">
-                <icon icon="mdi:user" height="20px" />
+                <Icon icon="mdi:user" height="20px" />
               </div>
             </template>
-          </n-avatar>
-          {{ authStore.profile?.profile.fullname }}
-        </n-button>
-      </n-dropdown>
+          </NAvatar>
+          {{ authStore.profile?.email }}
+        </NButton>
+      </NDropdown>
     </div>
-  </n-layout-header>
+  </NLayoutHeader>
 </template>
